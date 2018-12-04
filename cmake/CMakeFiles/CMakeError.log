@@ -1,0 +1,89 @@
+Determining if the CL_VERSION_2_0 exist failed with the following output:
+Change Dir: /home/adel88/OpenCL_Training/SC_OpenGL/cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_35809/fast"
+/usr/bin/make -f CMakeFiles/cmTC_35809.dir/build.make CMakeFiles/cmTC_35809.dir/build
+make[1]: Entering directory '/home/adel88/OpenCL_Training/SC_OpenGL/cmake/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_35809.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -I/usr/local/include   -o CMakeFiles/cmTC_35809.dir/CheckSymbolExists.c.o   -c /home/adel88/OpenCL_Training/SC_OpenGL/cmake/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/adel88/OpenCL_Training/SC_OpenGL/cmake/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/adel88/OpenCL_Training/SC_OpenGL/cmake/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: ‘CL_VERSION_2_0’ undeclared (first use in this function)
+   return ((int*)(&CL_VERSION_2_0))[argc];
+                   ^
+/home/adel88/OpenCL_Training/SC_OpenGL/cmake/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: note: each undeclared identifier is reported only once for each function it appears in
+CMakeFiles/cmTC_35809.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_35809.dir/CheckSymbolExists.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_35809.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/adel88/OpenCL_Training/SC_OpenGL/cmake/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_35809/fast' failed
+make: *** [cmTC_35809/fast] Error 2
+
+File /home/adel88/OpenCL_Training/SC_OpenGL/cmake/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include </usr/local/include/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_2_0
+  return ((int*)(&CL_VERSION_2_0))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/adel88/OpenCL_Training/SC_OpenGL/cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3e951/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3e951.dir/build.make CMakeFiles/cmTC_3e951.dir/build
+make[1]: Entering directory '/home/adel88/OpenCL_Training/SC_OpenGL/cmake/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3e951.dir/CheckSymbolExists.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_3e951.dir/CheckSymbolExists.c.o   -c /home/adel88/OpenCL_Training/SC_OpenGL/cmake/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_3e951
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e951.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_3e951.dir/CheckSymbolExists.c.o  -o cmTC_3e951 -rdynamic 
+CMakeFiles/cmTC_3e951.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_3e951.dir/build.make:97: recipe for target 'cmTC_3e951' failed
+make[1]: *** [cmTC_3e951] Error 1
+make[1]: Leaving directory '/home/adel88/OpenCL_Training/SC_OpenGL/cmake/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_3e951/fast' failed
+make: *** [cmTC_3e951/fast] Error 2
+
+File /home/adel88/OpenCL_Training/SC_OpenGL/cmake/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/adel88/OpenCL_Training/SC_OpenGL/cmake/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4bbaa/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4bbaa.dir/build.make CMakeFiles/cmTC_4bbaa.dir/build
+make[1]: Entering directory '/home/adel88/OpenCL_Training/SC_OpenGL/cmake/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4bbaa.dir/CheckFunctionExists.c.o
+/usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_4bbaa.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_4bbaa
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4bbaa.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_4bbaa.dir/CheckFunctionExists.c.o  -o cmTC_4bbaa -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_4bbaa.dir/build.make:97: recipe for target 'cmTC_4bbaa' failed
+make[1]: *** [cmTC_4bbaa] Error 1
+make[1]: Leaving directory '/home/adel88/OpenCL_Training/SC_OpenGL/cmake/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_4bbaa/fast' failed
+make: *** [cmTC_4bbaa/fast] Error 2
+
+

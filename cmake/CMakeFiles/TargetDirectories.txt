@@ -1,0 +1,3 @@
+/home/adel88/OpenCL_Training/SC_OpenGL/cmake/CMakeFiles/rebuild_cache.dir
+/home/adel88/OpenCL_Training/SC_OpenGL/cmake/CMakeFiles/edit_cache.dir
+/home/adel88/OpenCL_Training/SC_OpenGL/cmake/CMakeFiles/SC_OpenGL.dir
